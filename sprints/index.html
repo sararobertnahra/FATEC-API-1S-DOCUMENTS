@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Sprints - Fatequinha</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="..">Fatequinha</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../biblioteca/" class="nav-link">Biblioteca</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../backend/" class="nav-link">Backend</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../frontend/" class="nav-link">Frontend</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Sprints</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../frontend/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#epicos" class="nav-link">Épicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#detalhamento-dos-epicos" class="nav-link">Detalhamento dos Épicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#epico-1-exportacao-de-dados" class="nav-link">Épico 1: Exportação de Dados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#epico-2-gerenciamento-de-turmas" class="nav-link">Épico 2: Gerenciamento de Turmas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#persistencia-de-dados" class="nav-link">Persistência de dados</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#backlog-api-2o-sprint" class="nav-link">**BACKLOG API (2º SPRINT):</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1> BACKLOG API 1 SEMESTRE </h1>
+
+<h2 id="epicos">Épicos</h2>
+<ul>
+<li><strong>Exportação de Dados (Back-end)</strong>: A consolidação e exportação de dados costumam ser tarefas realizadas no back-end, pois envolvem o processamento e a preparação de dados para exportação.</li>
+<li><strong>Gerenciamento de Turmas (curso)</strong> : Esse épico está relacionado à criação, atualização e visualização de turmas, que envolvem a interface do usuário para realizar essas operações.</li>
+<li><strong>Gerenciamento de grupo</strong> : Esse épico está relacionado à criação, atualização e visualização de grupos, que envolvem a interface do usuário para realizar essas operações.</li>
+<li><strong>Gerenciamento de Alunos</strong> : Esse épico lida com a adição, atualização e visualização de informações de alunos, bem como a adição de notas parciais, todos os quais são interações do usuário com a interface.</li>
+<li><strong>Gerenciamento de Ciclos de Entrega e Scores:</strong> Este épico envolve a criação, atualização e visualização de ciclos de entrega e scores parciais, que são aspectos visíveis para o usuário.</li>
+<li><strong>Visibilidade e Acompanhamento:</strong> Esse épico visa fornecer informações objetivas sobre turmas, grupos de alunos, etc. A apresentação dessas informações é uma preocupação do front-end.</li>
+<li><strong>Configurações Globais (Back-end):</strong> Este épico envolve a definição de parâmetros globais e o afeta o funcionamento do sistema. Essa configuração geralmente é tratada no back-end.</li>
+<li><strong>Importação de Dados massivo (Back-end):</strong> A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.</li>
+</ul>
+<h2 id="detalhamento-dos-epicos">Detalhamento dos Épicos</h2>
+<h2 id="epico-1-exportacao-de-dados"><strong>Épico 1: Exportação de Dados</strong></h2>
+<h4 id="historia-de-usuario-1-como-um-administrador-eu-quero-selecionar-as-opcoes-de-gerenciamento-e-relatorios-isso-envolve-a-exportacao-de-dados"><strong>História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados.</strong></h4>
+<p><strong>Frontend:</strong>
+  - Botão no Index.html que gere relatórios vindo dos: gerenciamento_turmas.html, gerenciamento_alunos.html,    gerenciamento_ciclos.html, gerenciamento_global.html.</p>
+<p><img alt="Alt text" src="../epic1-hist1.png" />  </p>
+<p><strong>Backend:</strong>
+- Rota da API</p>
+<pre><code>- /api/relatorio/criar: Consolida os dados e exporta em formato PDF.
+- Consolida os dados e os exporta em formato PDF.
+</code></pre>
+<h2 id="epico-2-gerenciamento-de-turmas"><strong>Épico 2: Gerenciamento de Turmas</strong></h2>
+<h4 id="historia-de-usuario-1-como-um-administrador-eu-quero-visualizar-a-lista-de-turmas-disponiveis-seus-respectivos-grupos-com-os-alunos-e-alunos"><strong>História de Usuário 1: Como um administrador, eu quero visualizar a lista de turmas disponíveis, seus respectivos grupos com os alunos e alunos.</strong></h4>
+<p><strong>Frontend:</strong></p>
+<ul>
+<li>Gerenciamento_turmas.html que conterá todas as turmas já criadas com ícone de edição e de exclusão em cada um deles.</li>
+<li>Deverá ser criado um campo onde serão inseridas as turmas de forma dinâmica.</li>
+<li>Botão para criar uma nova turma.</li>
+</ul>
+<p><img alt="Alt Text" src="../epic2-hist1.png" /></p>
+<p><strong>Backend</strong>
+- Módulo gerenciador_turmas.py com funções para listar turmas.
+ - Rotas de API:
+    - /api/turmas/get: Retorna a lista de turmas disponíveis.
+    - /api/turmas/delete: Deletar uma turma.</p>
+<h4 id="historia-de-usuario-2-como-um-administrador-eu-quero-criar-uma-nova-turma-com-nome-da-turma-o-professor-e-a-associacao-de-grupos-pre-existentes-ou-nenhum-grupo-a-turma-nao-precisa-ser-criada-com-grupo-de-alunos-mas-precisa-poder-recebe-los-a-turma-so-sera-ativa-com-grupo-de-alunos-vinculados"><strong>História de Usuário 2: Como um administrador, eu quero criar uma nova turma com nome da turma, o professor e a associação de grupos pré-existentes ou nenhum grupo.  A turma não precisa ser criada com grupo de alunos, mas precisa poder recebê-los. A turma só será ativa com grupo de alunos vinculados.</strong></h4>
+<p><strong>Frontend:</strong>
+- Template HTML para Gerenciamento de Turmas: </p>
+<pre><code>- criar_turma.html que conterá os formulários para criar uma nova turma.
+- A inclusão de grupos de alunos não precisa ser obrigatória.
+- Nome da turma e professor são obrigatórios.
+- Campo para procurar por um grupo pré-existente
+- Campo para listar grupos
+</code></pre>
+<p><img alt="Alt Text" src="../epic2-hist2.png" /></p>
+<p><strong>Backend:</strong></p>
+<ul>
+<li>Módulo gerenciador_turmas.py com funções para criar uma turma com/sem novo grupo de alunos.</li>
+<li>
+<p>Rotas de API:</p>
+<ul>
+<li>/api/turmas/criar: Manipula a criação de uma nova turma.</li>
+<li>/api/grupos /listar: Manipula a lista de grupos preexistente </li>
+</ul>
+</li>
+</ul>
+<h4 id="historia-de-usuario-3-como-um-administrador-eu-quero-editar-as-informacoes-de-uma-turma-e-adicionar-mais-grupos"><strong>História de Usuário 3: Como um administrador, eu quero editar as informações de uma turma e adicionar mais  grupos.</strong></h4>
+<ul>
+<li>Template HTML para Gerenciamento de Turmas: <ul>
+<li>editar_turmas.html que conterá os formulários de edição de uma nova turma, com possibilidade de ser levada a edição de grupo e de criar novo grupo. </li>
+</ul>
+</li>
+</ul>
+<p><img alt="Alt Text" src="../epic2-hist3.png" /></p>
+<ul>
+<li>Módulo gerenciador_turmas.py com funções para atualizar informações de turma e editar grupo de alunos.</li>
+<li>
+<p>Rotas de API:</p>
+<ul>
+<li>/api/turmas/atualizar/{id}: Manipula a atualização das informações de uma turma específica.</li>
+<li>/api/grupos/atualizar/{id}: Manipula a atualização das informações de um grupo de alunos específico.</li>
+</ul>
+</li>
+</ul>
+<h4 id="historia-de-usuario-4-como-um-administrador-eu-quero-excluir-uma-turma-e-um-grupo-de-alunos"><strong>História de Usuário 4: Como um administrador, eu quero excluir uma turma e um grupo de alunos.</strong></h4>
+<p><strong>Frontend:</strong></p>
+<pre><code>    Ícone de exclusão do grupo
+</code></pre>
+<p><img alt="Alt Text" src="../epic2-hist4.png" /></p>
+<ul>
+<li>Módulo gerenciador_turmas.py com funções para excluir turmas.</li>
+<li>Rotas de API:<ul>
+<li>/api/turmas/excluir/{id}: Manipula a exclusão de uma turma específica.</li>
+<li>/api/grupos/excluir/{id}: Manipula a exclusão de um grupo específico. (Vamos excluir o grupo?)</li>
+</ul>
+</li>
+</ul>
+<h3 id="_1">**</h3>
+<p>Épico 3: Gerenciamento de grupos**  </p>
+<h4 id="historia-de-usuario-1-como-administrador-quero-ver-todos-os-grupos-formados-e-associados-as-turmas"><strong>História de Usuário 1: Como administrador, quero ver todos os grupos formados e associados às turmas.</strong></h4>
+<p><strong>Frontend:</strong></p>
+<ul>
+<li>Template HTML para visualização de grupos:    </li>
+<li>gerenciamento_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.  </li>
+<li>Cada grupo deve apresentar seu nome e respectiva turma.  </li>
+</ul>
+<p><img alt="Alt text" src="../epic3-hist1.png" /></p>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_grupos.py com funções para listar os grupos associados às turmas. </li>
+<li>Rotas de API:</li>
+<li>/api/grupos/listar: Manipula a listagem de grupos.</li>
+</ul>
+<h4 id="historia-do-usuario-2-como-um-administrador-eu-quero-criar-grupos-de-alunos-associado-a-uma-turma"><strong>História do usuário 2: Como um administrador, eu quero criar grupos de alunos associado a uma turma.</strong></h4>
+<p><img alt="Alt text" src="../epic3-hist2.png" />
+<strong>Frontend</strong>  </p>
+<ul>
+<li>Template HTML para criar um grupo: </li>
+<li>criar_grupo.html que conterá os formulários de criação de um novo grupo  </li>
+<li>Selecionar a qual turma ele pertencerá.  </li>
+<li>Para adicionar um grupo é necessário inserir o nome do grupo e a turma.  </li>
+</ul>
+<p><strong>Backend</strong>  </p>
+<ul>
+<li>Módulo gerenciador_grupo.py com funções para adicionar pré-existente, e associar esse grupo a uma turma.  </li>
+<li>Rotas de API:  </li>
+<li>/api/tumas/listas: Fazer a leitura das turmas existentes.  </li>
+<li>/api/grupos/adicionar: Manipula a adição de um novo grupo a uma turma.  </li>
+</ul>
+<h4 id="historia-do-usuario-3-como-um-administrador-eu-quero-editar-grupos-essas-devem-ser-associado-a-uma-turma"><strong>História do usuário 3: Como um administrador, eu quero editar grupos, essas devem ser associado a uma turma.</strong></h4>
+<p><strong>Frontend</strong>  </p>
+<ul>
+<li>Template HTML para Gerenciamento de um grupo:  </li>
+<li>editar_grupo.html conterá as informações do grupo selecionado  </li>
+<li>Pode levar a visualização das notas do aluno. <br />
+<img alt="Alt text" src="../epic3-hist3.png" /> </li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_grupo.py com funções para adicionar alunos pré-existente, excluir aluno do grupo e editar qual turma esse grupo está associado.  </li>
+<li>Rotas de API:  </li>
+<li>/api/grupos/editar/{id}: Manipula para editar grupos.</li>
+</ul>
+<h4 id="historia-de-usuario-4-como-administrador-quero-excluir-os-grupos-ffrontend"><strong>História de Usuário 4: Como administrador, quero excluir os grupos fFrontend:</strong></h4>
+<ul>
+<li>Template HTML para visualização de grupos:  </li>
+<li>visualizacar_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.  </li>
+<li>O ícone deve acionar a ação de excluir 
+<img alt="Alt text" src="../epic3-hist4.png" />  </li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_grupos.py com funções para excluir o aluno selecionado.  </li>
+<li>Rotas de API:  </li>
+<li>/api/grupos/excluir/{id}: Manipula a listagem de grupos, excluindo o selecionado.  </li>
+</ul>
+<h3 id="epico-4-gerenciamento-de-alunos"><strong>Épico 4: Gerenciamento de Alunos</strong></h3>
+<h4 id="historia-de-usuario-1-como-um-administrador-eu-quero-listar-alunos-existentes"><strong>História de Usuário 1: Como um administrador, eu quero listar alunos existentes.</strong></h4>
+<p><strong>Frontend</strong>  </p>
+<ul>
+<li>Template HTML para listar Alunos:  </li>
+<li>gerenciamento_alunos.html que conterá um buscador e uma lista de alunos existentes, com botão para edição e de exclusão, e hiperlink para as notas do aluno  </li>
+</ul>
+<p><img alt="Alt text" src="../epic4-hist1.png" /><br />
+<strong>Backend</strong>  </p>
+<ul>
+<li>Módulo gerenciador_alunos.py com funções para listar um aluno.  </li>
+<li>Rotas de API:  </li>
+<li>/api/alunos/listar: Manipula a adição de um novo aluno.  </li>
+</ul>
+<h4 id="historia-de-usuario-2-como-um-administrador-eu-quero-adicionar-um-novo-aluno-com-informacoes-pessoais-e-matricula"><strong>História de Usuário 2: Como um administrador, eu quero adicionar um novo aluno com informações pessoais e matrícula</strong></h4>
+<p><strong>Frontend</strong>  </p>
+<ul>
+<li>Template HTML para Adicionar Alunos:   </li>
+<li>gerenciamento_alunos.html que conterá o formulário para adicionar um novo aluno<br />
+<img alt="Alt text" src="../epic4-hist2.png" /></li>
+</ul>
+<p><strong>Backend</strong>  </p>
+<ul>
+<li>Módulo gerenciador_alunos.py com funções para adicionar um aluno.  </li>
+<li>Rotas de API:  </li>
+<li>/api/alunos/adicionar: Manipula a adição de um novo aluno.</li>
+</ul>
+<h4 id="historia-de-usuario-3-como-um-administrador-eu-quero-editar-as-informacoes-de-um-aluno-existente"><strong>História de Usuário 3: Como um administrador, eu quero editar as informações de um aluno existente.</strong></h4>
+<p><strong>Frontend:</strong>  </p>
+<ul>
+<li>Template HTML para editar aluno:  </li>
+<li>edicao_alunos.html que conterá o formulário para adicionar um novo aluno<br />
+<img alt="Alt text" src="../epic4-hist3.png" /></li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_alunos.py com funções para atualizar(editar) informações de alunos.  </li>
+<li>Rotas de API: /api/alunos/atualizar/{id}: Manipula a atualização das informações de um aluno específico.</li>
+</ul>
+<h4 id="historia-de-usuario-4-como-um-administrador-eu-quero-excluir-alunos"><strong>História de Usuário 4: Como um administrador, eu quero excluir alunos.</strong></h4>
+<p><strong>Frontend:</strong>  </p>
+<ul>
+<li>Template HTML para editar aluno :</li>
+<li>gerenciamento_alunos.html que um botão para exclusão do aluno<br />
+<img alt="Alt text" src="../epic4-hist4.png" /></li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_alunos.py com funções para excluir alunos.  </li>
+<li>Rotas de API: /api/alunos/excluir/{id}: Manipula a atualização das informações de um aluno específico.  </li>
+</ul>
+<h3 id="epico-5-gerenciamento-de-ciclos-de-entrega-e-scores"><strong>Épico 5: Gerenciamento de Ciclos de Entrega e Scores</strong></h3>
+<h4 id="historia-de-usuario-1-como-um-administrador-eu-quero-visualizarlistar-as-notas-de-um-aluno"><strong>História de Usuário 1: Como um administrador, eu quero visualizar(listar) as notas de um aluno.</strong></h4>
+<p><strong>Preciso criar um campo para exibir o FEE total e parcial.</strong> Qual o cálculo do FEE?    FEE = ((Score do Ciclo de Entrega 1 (C1) * Peso de C1) + ... + (Score do Ciclo de Entrega N (CN) * Peso de CN)) / Soma dos Pesos de C  </p>
+<p><strong>Frontend:</strong></p>
+<ul>
+<li>Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá o aluno, as turmas que estão matriculadas e as respectivas novas.<br />
+<img alt="Alt text" src="../epic5-hist1.png" /></li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_ciclos.py com funções para listar as turmas e as notas associadas aquele aluno.  </li>
+<li>Rotas de API: /api/notas/listar/aluno/{id}: Manipula a lista de um novo ciclo de entrega</li>
+</ul>
+<h4 id="historia-de-usuario-2-como-um-administrador-eu-quero-adicionar-uma-nova-nota-a-um-aluno"><strong>História de Usuário 2: Como um administrador, eu quero adicionar uma nova nota a um aluno.</strong></h4>
+<p><strong>Frontend:</strong>  </p>
+<ul>
+<li>Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá os formulários para criar uma nova nota associada a uma turma.
+<img alt="Alt text" src="../epic5-hist2.png" /></li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_ciclos.py com funções para criar nota associada a aluno e ao ciclo de entrega.  </li>
+<li>Rotas de API: /api/notas/criar/turma/{id}: Manipula a criação de um novo ciclo de entrega  </li>
+</ul>
+<h4 id="historia-de-usuario-3-como-um-administrador-eu-quero-editar-as-notas-de-entrega-existente"><strong>História de Usuário 3: Como um administrador, eu quero editar as notas de entrega existente.</strong></h4>
+<p><strong>Frontend:</strong>  </p>
+<ul>
+<li>Template HTML para Gerenciamento de Ciclos de Entrega: editar_nota.html que conterá os formulários para editar uma nota pré-existente associada a uma turma.<br />
+<img alt="Alt text" src="../epic5-hist3.png" /> </li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_ciclos.py com funções para as notas de ciclos de entrega.  </li>
+<li>Rotas de API:  </li>
+<li>/api/nota/atualizar/{id}: Manipula a atualização da nota em uma determinada entrega específica.  </li>
+</ul>
+<h4 id="historia-de-usuario-4-como-um-administrador-eu-quero-excluir-notas-parciais-para-os-alunos-em-relacao-a-um-ciclo"><strong>História de Usuário 4: Como um administrador, eu quero excluir notas parciais para os alunos em relação a um ciclo.</strong></h4>
+<p><strong>Frontend:</strong></p>
+<ul>
+<li>Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html  que conterá um ícone que deletar a nota de um aluno associado a um ciclo e uma turma.<br />
+<img alt="Alt text" src="../epic5-hist4.png" />  </li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo gerenciador_ciclos.py com funções para excluir as notas de ciclos de entrega.  </li>
+<li>Rotas de API:  </li>
+<li>/api/nota/excluir/{id}: Manipula a exclusão de uma nota em uma determinada entrega específica.  </li>
+</ul>
+<h3 id="epico-6-configuracoes-globais"><strong>Épico 6: Configurações Globais</strong></h3>
+<h4 id="historia-de-usuario-1-como-um-administrador-quero-listar-e-ver-os-parametros-globais-das-turmas"><strong>História de Usuário 1: Como um administrador, quero listar e ver os parâmetros globais das turmas</strong></h4>
+<p><strong>Frontend:</strong>  </p>
+<ul>
+<li>Template HTML para Gerenciamento Global: gerenciamento_global.html que conterá as turmas existentes com seus respectivos parametros globais. Todas devem conter seu botão de editar.<br />
+<img alt="Alt text" src="../epic6-hist1.png" />  </li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Função para listar parâmetros globais no módulo gerenciador_configuracoes.py  </li>
+<li>Rota de API: /api/globalsettings/listar </li>
+<li>para manipular a atualização dos parâmetros globais.  </li>
+</ul>
+<h4 id="historia-de-usuario-2-como-um-administrador-eu-quero-editar-parametros-globais-como-datas-do-periodo-letivo"><strong>História de Usuário 2: Como um administrador, eu quero editar parâmetros globais, como datas do período letivo.</strong></h4>
+<p><strong>Frontend:</strong>  </p>
+<ul>
+<li>Template HTML para Gerenciamento Global: gerenciamento_global.html que conterá os formulários para atualizar os parâmetros globais de cada turma. 
+<img alt="Alt text" src="../epic6-hist2.png" />  </li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Função para atualizar parâmetros globais no módulo gerenciador_configuracoes.py  </li>
+<li>Rota de API :api/globalsettings/{id}/editar  </li>
+<li>para manipular a atualização dos parâmetros globais.  </li>
+</ul>
+<h3 id="epico-7-carregamento-de-dados-massivo"><strong>Épico 7: Carregamento de Dados massivo</strong></h3>
+<h4 id="historia-de-usuario-1-como-um-administrador-eu-quero-carregar-informacoes-de-alunos-partir-de-arquivos"><strong>História de Usuário 1: Como um administrador, eu quero carregar informações de alunos partir de arquivos.</strong></h4>
+<p><strong>Frontend:</strong>  </p>
+<ul>
+<li>Tela de index.html terá um botão para update para o carregamento do CSV  </li>
+<li>Sugestão ( botão que faz download de uma planilha padrão de sugestão para a importação do CSV)<br />
+<img alt="Alt text" src="../epic7-hist1.png" />  </li>
+</ul>
+<p><strong>Backend:</strong>  </p>
+<ul>
+<li>Módulo carregamento_dados.py com funções para carregar informações de alunos e scores a partir de um arquivo CSV.  </li>
+<li>Função para autenticar o formato do CSV, ou seja, ver se está dentro dos padrões.  </li>
+<li>Função para realizar o cadastramento de cada um dos alunos.  </li>
+<li>Rotas de API:</li>
+<li>/api/carregamento: Manipula o carregamento de dados a partir de arquivos.</li>
+</ul>
+<h1 id="persistencia-de-dados"><strong><p style="text-align:center;">Persistência de dados</p></strong></h1>
+<h3 id="relacao-de-entidades"><strong><p style="text-align:center;">Relação de Entidades</p></strong></h3>
+<p><img alt="Alt text" src="../image-6.png" /></p>
+<p>Nessa relação temos que um <strong>aluno</strong> pode estar matriculado em <strong>diferentes</strong> cursos, o <strong>aluno mateus</strong> tem <strong>duas listas de notas, uma para cada curso matriculado</strong>.</p>
+<p>Dessa forma será possível fazer a média e adquirir estatísticas de notas de diferentes cursos e turmas.</p>
+<p><strong><p style="text-align:center;">Tabelas de banco de dados</p></strong></p>
+<p><strong>1. Dados de Cursos:</strong></p>
+<p>cursos (array): Contém informações sobre os cursos disponíveis.</p>
+id (inteiro): ID único do curso.</p>
+nome_curso (string): Nome do curso.</p>
+professor (string): Nome do professor responsável pelo curso.</p>
+qtd_sprint (inteiro): Quantidade de sprints associadas ao curso.</p>
+turmas (array de inteiros): IDs das turmas relacionadas ao curso.</p></p>
+<p><strong>2. Dados de Turmas:</strong></p>
+<p>turmas (array): Contém informações sobre as turmas.<!--´p-->
+id (int): ID único da turma.</p>
+id_curso (inteiro): ID do curso ao qual a turma está associada.</p>
+nome_turma (string): Nome da turma.</p></p>
+<pre><code class="language-python">{
+    &quot;turmas&quot; : [
+        {
+            &quot;id&quot;: 1,
+            &quot;id_curso&quot;: 1,
+            &quot;nome_turma&quot; : &quot;Turma A&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;id_curso&quot;: 2,
+            &quot;nome_turma&quot; : &quot;Turma A&quot;
+        }
+    ]
+}
+
+</code></pre>
+<p><strong>3. Dados de Grupos:</strong></p>
+<p>id (int): ID único do grupo.</p>
+id_curso (inteiro): ID do curso ao qual o grupo está associado.</p>
+id_turma (inteiro): ID da turma à qual o grupo pertence.</p>
+nome_grupo (string): Nome descritivo do grupo.</p>
+alunos (array de inteiros): Uma lista de IDs de alunos que fazem parte deste grupo.</p></p>
+<pre><code class="language-python">{
+    &quot;grupos&quot; : [
+        {
+            &quot;id&quot;: 1,
+            &quot;id_curso&quot;: 1,
+            &quot;id_turma&quot;: 1,
+            &quot;nome_grupo&quot;: &quot;Grupo A&quot;,
+            &quot;alunos&quot;: [1,2]
+        }
+        {
+            &quot;id&quot;: 2,
+            &quot;id_curso&quot;: 2,
+            &quot;id_turma&quot;: 3,
+            &quot;nome_grupo&quot;: &quot;Grupo B&quot;,
+            &quot;alunos&quot;: [3]
+        }
+    ]
+}
+</code></pre>
+<p><strong>4. Dados de Alunos:</strong></p>
+<p>alunos (array): Contém informações sobre os alunos matriculados em cursos.</p>
+id (int): ID único do aluno.</p>
+nome (string): Nome do aluno.</p>
+cursos_id (array de inteiros): IDs dos cursos aos quais o aluno está matriculado.</p>
+notas (array de objetos): Contém informações sobre as notas do aluno em diferentes cursos e    turmas.</p>
+id_curso (inteiro): ID do curso relacionado às notas.</p>
+id_turma (inteiro): ID da turma relacionada às notas.</p>
+notas (array de números): Lista de notas obtidas pelo aluno no curso e turma específicos.</p>
+ffe (nulo ou qualquer outro valor): Média das notas.</p></p>
+<p>```python
+{
+    "alunos": [
+        {
+            "id": 1,
+            "nome": "Mateus",
+            "cursos_id": [1, 3],
+            "notas": [
+                {
+                    "id_curso": 1,
+                    "id_turma": 1,
+                    "notas": [5, 6.23, 10],
+                    "ffe": null
+                },
+                {
+                    "id_curso": 3,
+                    "id_turma": 4,
+                    "notas": [5, 8],
+                    "ffe": null</p>
+<pre><code>            }
+        ]
+    }
+]
+</code></pre>
+<p>}</p>
+<p>```</p>
+<h2 id="backlog-api-2o-sprint">**<p style="text-align:center;">BACKLOG API (2º SPRINT):</p></h2>
+<h3 id="epico-1-gerenciamento-de-turma"><strong>Épico 1: Gerenciamento de turma:</strong></p></h3>
+<h4 id="historia-de-usuario-1-como-um-administrador-eu-quero-criar-uma-nova-turma"><strong><p style="text-align:center;">História de Usuário 1: Como um administrador, eu quero criar uma nova turma.</p></strong></h4>
+<ol>
+<li>
+<p>Criar tela inicial que encaminhe para a administração de um curso.</p>
+</li>
+<li>
+<p>Na tela deve aparecer os cursos cadastros e ter a opção de cadastrar novo curso.</p>
+</li>
+<li>
+<p>Para cadastrar um curso será necessário no mínimo adicionar seu nome e o professor responsável.</p>
+</li>
+<li>
+<p>Criar validação para que o nome do curso não seja repetido.</p>
+</li>
+<li>
+<p>Demais opções de curso são: quantidade de sprints e selecionar quantas turmas ele quer criar (<strong>banco de dados = bdd</strong> então bdd1, bdd2, ..., bdd5).</p>
+</li>
+<li>
+<p>Operações CRUD (Create, Read, Update, Delete).</p>
+</li>
+<li>
+<p>Campo para procurar um curso existente.</p>
+</li>
+</ol>
+<h3 id="historia-de-usuario-2-como-um-administrador-eu-quero-adicionar-uma-turma"><strong><p style="text-align:center;">História de Usuário 2: Como um administrador, eu quero adicionar uma turma.</p></strong></h3>
+<ol>
+<li>
+<p>Criar tela de administração de turmas.</p>
+</li>
+<li>
+<p>Na tela deve aparecer turmas cadastrar e ter a opção de cadastrar nova turma.</p>
+</li>
+<li>
+<p>Para cadastrar uma turma é necessário escolher um curso.</p>
+</li>
+<li>
+<p>Operações CRUD (Create, Read, Update, Delete)</p>
+</li>
+<li>
+<p>Campo para procurar uma turma existente.</p>
+</li>
+<li>
+<p>Teste para ver se o relacionamento entre o curso e a turma então corretos.</p>
+</li>
+</ol>
+<h4 id="historia-de-usuario-3-como-um-administrador-eu-quero-adicionar-um-aluno-a-uma-turma"><strong><p style="text-align:center;">História de Usuário 3: Como um administrador, eu quero adicionar um aluno a uma turma.</p></strong></h4>
+<ol>
+<li>Criar tela de administração de alunos.</li>
+</ol>
+<h4 id="historia-de-usuario-4-como-um-administrador-eu-quero-adicionar-um-aluno-a-um-grupo"><strong><p style="text-align:center;">História de Usuário 4: Como um administrador, eu quero adicionar um aluno a um grupo.</p></strong></h4>
+<h3 id="epico-2-rotas-de-api"><strong>Épico 2:  Rotas de API:</strong></h3>
+<h4 id="historia-de-usuario-1-como-administrador-eu-quero-configurar-meus-cursos"><strong><p style="text-align:center;">História de Usuário 1: Como administrador eu quero configurar meus cursos.</p></strong></h4>
+<ol>
+<li>
+<p>Necessário criar as rotas para que o front end consiga fazer o croud</p>
+</li>
+<li>
+<p>Documentar as rotas e suas funções</p>
+</li>
+<li></li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
